@@ -12,3 +12,10 @@ exports.VerifyUserLogin=async (req,res)=>{
     }
 
 }
+
+
+exports.UserLogout=async (req,res)=>{
+    let cookieOption={expires:new Date(Date.now()-24*6060*1000),httponly:false}
+    res.cookie('token','',cookieOption)
+    return res.status(200).json({msg:'successfully logged out'});
+}

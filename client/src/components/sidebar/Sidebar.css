@@ -1,9 +1,0 @@
-.aside{
-    width: 110px;
-    min-height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background-color: #eeffee;
-}
