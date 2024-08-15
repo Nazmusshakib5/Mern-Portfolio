@@ -18,6 +18,18 @@ const Navbar = () => {
         }
     }
 
+    const navBarBg=()=>{
+        const navBarbg=document.getElementById('navBarbg')
+        window.addEventListener('scroll',()=>{
+            if(window.pageYOffset >200){
+                navBarbg.classList.add('bgDark')
+            }else {
+                navBarbg.classList.remove(('bgDark'))
+            }
+        })
+
+    }
+
     //Determine auto Active Section when scrolling
     const determineActiveSection= ()=>{
         for(let i=navItemID.length - 1;i>=0;i--){
@@ -44,7 +56,10 @@ const Navbar = () => {
             determineActiveSection()
         }
 
+        navBarBg()
+
         window.addEventListener('scroll',handleScroll)
+
         //remove when not scrolling
         return ()=>{
             window.removeEventListener('scroll',handleScroll)
@@ -54,7 +69,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className="NavBody px-4 py-7 w-full top-0 md:z-10 md:fixed md:bg-[rgba(0,0,0,0.2)] bg-[rgba(0,0,0,0.9)]">
+            <nav id='navBarbg' className="NavBody px-4 py-7 w-full top-0 md:z-10 md:fixed md:bg-transparent bg-transparent">
                 <div className=" mx-auto flex justify-between items-center">
                     {/* Left Icon */}
                     <div className="text-white flex">

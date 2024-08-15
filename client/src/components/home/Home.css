@@ -3,3 +3,49 @@
     color: white;
     border:2px solid #466e00;
 }
+
+.movingWords{
+    width: 100%;
+    background: #011501;
+    backdrop-filter: blur(10px);
+    /*background: #010c01;*/
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+
+}
+
+.movingWords h1{
+    font-size: 48px !important;
+    color: transparent;
+    -webkit-text-stroke-width:0.2px ;
+    -webkit-text-stroke-color: #fff;
+    display: inline-block;
+    animation:animate 10s linear infinite;
+    padding-left: 20%;
+
+}
+
+
+@keyframes animate {
+    0%{
+        transform: translateX(140%);
+    }
+    100%{
+        transform: translateX(-190%);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .movingWords h1{
+        font-size: 24px !important;
+        color: transparent;
+        -webkit-text-stroke-width:0.2px ;
+        -webkit-text-stroke-color: #fff;
+        display: inline-block;
+        animation:animate 10s linear infinite;
+        padding-left: 20%;
+
+    }
+}
