@@ -1,9 +1,60 @@
 import './Navbar.css'
 import avatar1 from '../../assets/avatar-1.svg'
+import {navItemID} from "./NavItemID.jsx";
+import {Link} from "react-router-dom";
+import {useEffect, useState} from "react";
 const Navbar = () => {
+    // Tract The active Link and scroll to the section
+    const [activeLink,setActiveLink]=useState('home')
+    const [isScrolled,setIsScrolled]=useState(false)
+
+    // Function to scroll smooth to the sections
+    const scrollToSection=(sectionID)=>{
+        const element=document.getElementById(sectionID)
+        if(element){
+            const marginTop=0
+            const scrollToY=element.getBoundingClientRect().top + window.scrollY-marginTop;
+            window.scrollTo({top:scrollToY,behavior:"smooth"})
+        }
+    }
+
+    //Determine auto Active Section when scrolling
+    const determineActiveSection= ()=>{
+        for(let i=navItemID.length - 1;i>=0;i--){
+            const section=document.getElementById(navItemID[i])
+            if(section){
+                const rect=section.getBoundingClientRect();
+                if(rect.top <= 120 && rect.bottom >=120){
+                    setActiveLink(navItemID[i]);
+                    break;
+                }
+            }
+        }
+    }
+
+    useEffect(() => {
+        const handleScroll=()=>{
+            if(window.scrollY>300){
+                setIsScrolled(true)
+            }
+            else {
+                setIsScrolled(false)
+            }
+            //call the determine function when scrolling
+            determineActiveSection()
+        }
+
+        window.addEventListener('scroll',handleScroll)
+        //remove when not scrolling
+        return ()=>{
+            window.removeEventListener('scroll',handleScroll)
+        }
+
+    }, []);
+
     return (
         <div>
-            <nav className="NavBody px-4 py-7 w-full top-0 z-10 fixed">
+            <nav className="NavBody px-4 py-7 w-full top-0 md:z-10 md:fixed md:bg-[rgba(0,0,0,0.2)] bg-[rgba(0,0,0,0.9)]">
                 <div className=" mx-auto flex justify-between items-center">
                     {/* Left Icon */}
                     <div className="text-white flex">
@@ -17,25 +68,14 @@ const Navbar = () => {
                         <p>Mojo</p>
                     </div>
 
-                    {/* Middle Links */}
                     <div className="hidden md:flex space-x-4 text-white md:mr-20 md:gap-10 gap-3">
-                        <a href="#" className="hover:text-gray-400">
-                            Home
-                        </a>
-                        <a href="#about" className="hover:text-gray-400">
-                            About Me
-                        </a>
-                        <a href="#price" className="hover:text-gray-400">
-                            Price
-                        </a>  <a href="#" className="hover:text-gray-400">
-                            Home
-                        </a>
-                        <a href="#about" className="hover:text-gray-400">
-                            About Me
-                        </a>
-                        <a href="#price" className="hover:text-gray-400">
-                            Price
-                        </a>
+                        {navItemID.map((item,i)=> (
+                            <Link key={i} to='/' onClick={()=>scrollToSection(item)}
+                     className={activeLink===item ? 'uppercase hover:text-gray-400 active':'uppercase hover:text-gray-400'}>
+                                {item}
+                            </Link>
+                        ))}
+
                     </div>
 
                     {/* Right Collapsible Button */}
@@ -67,25 +107,12 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu */}
-                <div className="md:hidden hidden" id="mobile-menu">
-                    <a href="#" className="block px-4 py-2 text-white">
-                        Home
-                    </a>
-                    <a href="#about" className="block px-4 py-2 text-white">
-                        About Me
-                    </a>
-                    <a href="#price" className="block px-4 py-2 text-white">
-                        Price
-                    </a>
-                 <a href="#" className="block px-4 py-2 text-white">
-                Home
-                </a>
-                <a href="#about" className="block px-4 py-2 text-white">
-                    About Me
-                </a>
-                <a href="#price" className="block px-4 py-2 text-white">
-                    Price
-                </a>
+                <div className="md:hidden mt-5 hidden" id="mobile-menu">
+                    {navItemID.map((item,i)=> (
+                        <Link key={i} to='/' className="hover:text-gray-400 block px-4 py-2 text-white uppercase">
+                            {item}
+                        </Link>
+                    ))}
                 </div>
             </nav>
         </div>

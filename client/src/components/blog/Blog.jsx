@@ -1,9 +1,9 @@
 import './Blog.css'
 const Blog = () => {
     return (
-        <div className='blogSection'>
+        <section id='blog' className='section'>
             Blog
-        </div>
+        </section>
     );
 };
 
