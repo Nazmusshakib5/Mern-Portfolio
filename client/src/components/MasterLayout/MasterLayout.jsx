@@ -15,12 +15,12 @@ const MasterLayout = () => {
                 <Navbar/>
                 <Home/>
                 <About/>
+                <Services/>
                 <Blog/>
                 <Contact/>
                 {/*<Portfolio/>*/}
                 {/*<Pricing/>*/}
                 {/*<Resume/>*/}
-                <Services/>
                 <Testimonial/>
         </div>
     );

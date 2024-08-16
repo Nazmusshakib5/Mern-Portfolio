@@ -6,8 +6,8 @@
 
 .movingWords{
     width: 100%;
+    border-top: 1px solid gray;
     background: #011501;
-    backdrop-filter: blur(10px);
     /*background: #010c01;*/
     text-transform: uppercase;
     overflow: hidden;

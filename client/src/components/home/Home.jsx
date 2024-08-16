@@ -4,14 +4,14 @@ import GreenBG from '../../assets/greenBlack3.jpg'
 const Home = () => {
     return (
         <div>
-            <section className='hero-section' id='home'>
+            <section className='hero-section  ' id='home'>
                 <div className='hero-bg flex items-center justify-center'
                 style={
                     {   backgroundImage:`url(${GreenBG})`,
                         width:"100%",
                         height:"90vh",
                         backgroundRepeat:"no-repeat",
-                        backgroundSize:'cover',
+                        backgroundSize:'cover'
                     }
                 }>
                     <div></div>
@@ -23,7 +23,7 @@ const Home = () => {
                          border-solid border-2 border-b-green-700 mt-5 lg:w-[120px] hire-btn'>Hire me</button>
                     </div>
                 </div>
-                <div className='movingWords'>
+                <div className='movingWords shadow-lg shadow-emerald-950'>
                     <h1>Fully Responsive Services</h1>
                     <h1>Simple and minimalistic looks</h1>
                 </div>
