@@ -1,7 +1,7 @@
 import './Pricing.css'
 const Pricing = () => {
     return (
-        <div>
+        <div id='pricing' className='section'>
             Pricing
         </div>
     );

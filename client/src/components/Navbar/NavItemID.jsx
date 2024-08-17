@@ -1,1 +1,1 @@
-export const navItemID=['home','about','blog','contact','services','testimonial']
+export const navItemID=['home','projects','services','resume','blog','pricing','contact']

@@ -16,9 +16,9 @@ const Home = () => {
                 }>
                     <div></div>
                     <div className='text-center md:ml-24'>
-                        <h4 className='text-white md:text-7xl text-3xl'>All in One</h4>
-                        <p className='text-white md:text-7xl mt-3 text-5xl'>Personal Portfolio for</p>
-                        <p className='text-white md:text-7xl mt-3 text-2xl'>Web Developer</p>
+                        <h4 className='whiteFont md:text-7xl text-3xl'>All in One</h4>
+                        <p className='whiteFont md:text-7xl mt-3 text-5xl'>Personal Portfolio for</p>
+                        <p className='whiteFont md:text-7xl mt-3 text-2xl'>Web Developer</p>
                         <button className='text-green-700 md:rounded-2xl rounded-xl md:text-xl px-3 py-1.5
                          border-solid border-2 border-b-green-700 mt-5 lg:w-[120px] hire-btn'>Hire me</button>
                     </div>

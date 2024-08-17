@@ -8,7 +8,7 @@ import LoginPage from "./components/Login Page/LoginPage.jsx";
 // import Blog from "./components/blog/Blog.jsx";
 // import Contact from "./components/contact/Contact.jsx";
 // import Home from "./components/home/Home.jsx";
-// import Portfolio from "./components/portfolio/Portfolio.jsx";
+// import MyWork from "./components/Myworks/MyWork.jsx";
 // import Pricing from "./components/pricing/Pricing.jsx";
 // import Resume from "./components/resume/Resume.jsx";
 // import Services from "./components/services/Services.jsx";

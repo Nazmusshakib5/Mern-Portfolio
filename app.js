@@ -35,11 +35,11 @@ app.use(limiter);
 
 
 //database Connection Before Routing
-let URL='mongodb+srv://mongoShakib:<password>@cluster0.gtiw82u.mongodb.net/Portfolio';
+let URL='mongodb+srv://mongoShakib:<password>@cluster0.gtiw82u.mongodb.net/MyWork';
 let OPTION={user:'mongoShakib',pass:'mongoShakib69',autoIndex:true};
 
 mongoose.connect(URL,OPTION).then((res)=>{
-    console.log('Portfolio Database conneted successfully')
+    console.log('MyWork Database conneted successfully')
 }).catch((err)=>{
     console.log(err)
 })

@@ -1,7 +1,7 @@
 import './Testimonial.css'
 const Testimonial = () => {
     return (
-        <section id='testimonial' className='section'>
+        <section id='testimonial'>
             Testimonial
         </section>
     );
