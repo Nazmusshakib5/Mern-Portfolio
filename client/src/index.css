@@ -175,5 +175,6 @@ img{
 }
 
 .activePagePagination{
-  background-color: darkgreen;
+  background-color: #022a02;
+  border: 1px solid white;
 }

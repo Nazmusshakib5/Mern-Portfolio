@@ -9,7 +9,7 @@ import Resume from "../resume/Resume.jsx";
 import Services from "../services/Services.jsx";
 import Testimonial from "../testimonial/Testimonial.jsx";
 import CounterUpDetails from "../Counter Up/CounterUpDetails.jsx";
-import Carousel from "../SmallComponents/Carousel.jsx";
+import CarouselPost from "../SmallComponents/CarouselPost.jsx";
 
 const MasterLayout = () => {
     return (
@@ -17,7 +17,7 @@ const MasterLayout = () => {
             <Navbar/>
             <Home/>
             <About/>
-            <Carousel/>
+            <CarouselPost/>
             <Services/>
             <CounterUpDetails/>
             <Resume/>
