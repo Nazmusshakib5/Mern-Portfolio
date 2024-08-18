@@ -5,7 +5,7 @@ const Services = () => {
             <div className='w-full h-[100px]'></div>
             <div><h1 className='text-white text-center text-5xl mb-20 font-bold'>My Quality Services</h1></div>
             <div className='container flex flex-col gap-5'>
-                <div className="collapse bg-emerald-950 text-amber-50 rounded shadow-sm shadow-amber-300">
+                <div className="collapse collapse-arrow bg-emerald-950 text-amber-50 rounded shadow-sm shadow-amber-300">
                     <input type="checkbox"/>
                     <div className="collapse-title text-xl font-medium shadow-sm shadow-amber-50">Branding Design</div>
                     <div className="collapse-content bg-emerald-900">
@@ -17,7 +17,7 @@ const Services = () => {
                             style.</p>
                     </div>
                 </div>
-                <div className="collapse bg-emerald-950 text-amber-50 rounded shadow-sm shadow-amber-300">
+                <div className="collapse collapse-arrow bg-emerald-950 text-amber-50 rounded shadow-sm shadow-amber-300">
                     <input type="checkbox"/>
                     <div className="collapse-title text-xl font-medium shadow-sm shadow-amber-50">UI/UX Design</div>
                     <div className="collapse-content bg-emerald-900">
@@ -29,7 +29,7 @@ const Services = () => {
                             style.</p>
                     </div>
                 </div>
-                <div className="collapse bg-emerald-950 text-amber-50 rounded shadow-sm shadow-amber-300">
+                <div className="collapse collapse-arrow bg-emerald-950 text-amber-50 rounded shadow-sm shadow-amber-300">
                     <input type="checkbox"/>
                     <div className="collapse-title text-xl font-medium shadow-sm shadow-amber-50">Web Design</div>
                     <div className="collapse-content bg-emerald-900">
@@ -41,7 +41,7 @@ const Services = () => {
                             style.</p>
                     </div>
                 </div>
-                <div className="collapse bg-emerald-950 text-amber-50 rounded shadow-sm shadow-amber-300">
+                <div className="collapse collapse-arrow bg-emerald-950 text-amber-50 rounded shadow-sm shadow-amber-300">
                     <input type="checkbox"/>
                     <div className="collapse-title text-xl font-medium shadow-sm shadow-amber-50">App Design</div>
                     <div className="collapse-content bg-emerald-900">
