@@ -1,7 +1,7 @@
 import './Resume.css'
 const Resume = () => {
     return (
-        <section id='resume' className='mt-28'>
+        <section id='resume' className='mb-28 shadow-lg pb-28 shadow-emerald-950'>
             <div className='pt-24'>
                 <div className='text-center mb-16'><h2 className='text-6xl font-bold text-amber-50'>Resume</h2></div>
                 <div className='container flex md:grid grid-cols-2 flex-col gap-5'>
