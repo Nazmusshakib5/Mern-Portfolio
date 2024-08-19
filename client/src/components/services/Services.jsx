@@ -3,7 +3,7 @@ const Services = () => {
     return (
         <section id='services' className='mt-20 shadow-lg pb-20 shadow-emerald-950'>
             <div className='w-full h-[100px]'></div>
-            <div><h1 className='text-white text-center text-5xl mb-20 font-bold'>My Quality Services</h1></div>
+            <div><h1 className='text-amber-50 text-center text-4xl mb-20 font-bold uppercase'>My Quality Services</h1></div>
             <div className='container flex flex-col gap-5'>
                 <div className="collapse collapse-arrow bg-emerald-950 text-amber-50 rounded shadow-sm shadow-amber-300">
                     <input type="checkbox"/>

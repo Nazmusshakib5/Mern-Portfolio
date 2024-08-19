@@ -12,7 +12,7 @@ const MyWork = () => {
 
     return (
         <section className='container mx-auto'>
-            <div className='text-center mb-10'><h2 className='text-4xl font-semibold text-amber-50'>My Works</h2></div>
+            <div className='text-center mb-10'><h2 className='text-4xl font-semibold text-amber-50 uppercase'>Blogs</h2></div>
             <div className='md:grid grid-cols-3 flex flex-col w-full gap-5'>
                 {
                     CurrentPageData.map((item,i)=>{

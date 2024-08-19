@@ -6,7 +6,7 @@ const About = () => {
     return (
         <div id='projects' className='aboutSection w-full mt-14 shadow-lg pb-20 shadow-emerald-950'>
             <div className='w-full h-[100px]'></div>
-            <div><h1 className='text-white text-center text-5xl mb-14 font-bold'>New Projects</h1></div>
+            <div><h1 className='text-amber-50 text-center text-4xl mb-14 font-bold uppercase'>New Projects</h1></div>
             <div className='container md:grid grid-cols-3 gap-10 flex flex-col'>
                 {
                     projectData.map((item,i)=>{
