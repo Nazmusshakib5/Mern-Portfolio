@@ -2,7 +2,7 @@ import './Testimonial.css'
 import CarouselPost from "../SmallComponents/CarouselPost.jsx";
 const Testimonial = () => {
     return (
-        <section id='testimonial'>
+        <section id='testimonial' className='shadow-lg pb-20 shadow-emerald-950'>
             <CarouselPost/>
         </section>
     );
