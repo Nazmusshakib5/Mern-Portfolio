@@ -9,7 +9,7 @@ const DashboardPage = (props) => {
     const [isSideBar,setIsSideBar]=useState(true)
     const SideBarState=()=>{
             setIsSideBar(!isSideBar)
-            if(isSideBar){
+            if(!isSideBar){
                 const sideState= document.getElementById('sideBar');
                 const contentState=document.getElementById('contentBar')
                 sideState.classList.add('sideBarGrow')
@@ -35,10 +35,10 @@ const DashboardPage = (props) => {
                 <div><RxAvatar/></div>
             </nav>
             <div className="flex bg-white">
-                <div className='min-h-[90vh]  sideBar' id='sideBar'>
+                <div className='min-h-[90vh] pt-20  sideBarGrow' id='sideBar'>
                     <DashSideBar/>
                 </div>
-                <div className='min-h-[90vh] contentBar' id='contentBar'>
+                <div className='min-h-[90vh] w-full contentBar bg-[#999999]' id='contentBar'>
                     {props.children}
                 </div>
             </div>

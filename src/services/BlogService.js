@@ -6,7 +6,7 @@ const ObjectId=mongoose.Types.ObjectId;
 const ShowBlogService=async ()=>{
     try{
         const data=await BlogModel.find()
-        return {status:'success',data:data}
+        return {status:'success',msg:'blog data',data:data}
     }catch(e){
         return {status:'failed',data:e.toString()}
     }
