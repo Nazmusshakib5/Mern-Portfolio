@@ -1,0 +1,16 @@
+.sideBarGrow{
+    width: 15%;
+}
+
+.sideBarShrink{
+    display: none;
+}
+
+
+.contentBarGrow{
+    width: 100%;
+}
+
+.contentBarShrink{
+    width: 85%;
+}

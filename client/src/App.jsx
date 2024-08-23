@@ -1,8 +1,9 @@
 import './App.css'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import MasterLayout from "./components/MasterLayout/MasterLayout.jsx";
-import DashboardPage from "./components/DashboardPage/DashboardPage.jsx";
 import LoginPage from "./components/Login Page/LoginPage.jsx";
+import BlogPage from "./components/DashboardPage/BlogPage.jsx";
+import DashBoardHomePage from "./components/DashboardPage/DashBoardHomePage.jsx";
 
 // import About from './components/about/About.jsx'
 // import Blog from "./components/blog/Blog.jsx";
@@ -21,8 +22,9 @@ function App() {
        <BrowserRouter>
             <Routes>
                 <Route path='/' element={<MasterLayout/>}/>
-                <Route path='/dashboard' element={<DashboardPage/>}/>
+                <Route path='/dashboard' element={<DashBoardHomePage/>}/>
                 <Route path='/login' element={<LoginPage/>}/>
+                <Route path='/blogs' element={<BlogPage/>}/>
             </Routes>
        </BrowserRouter>
     </>

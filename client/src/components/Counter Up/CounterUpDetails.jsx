@@ -7,7 +7,7 @@ const CounterUpDetails = () => {
     const [count,setCount]=useState(false)
 
     return (
-        <div className='mt-28 mb-28 shadow-lg pb-28 shadow-emerald-950'>
+        <div className='mt-28  shadow-lg pb-28 shadow-emerald-950'>
             <ScrollTrigger onEnter={()=>setCount(true)} onExit={()=>setCount(false)}>
                 <div
                     className='bg-[#020202] container border-y-2 border-emerald-900 text-center px-20 py-8 md:px-36 md:py-10

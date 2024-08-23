@@ -1,7 +1,7 @@
 import './Services.css'
 const Services = () => {
     return (
-        <section id='services' className='mt-20 shadow-lg pb-20 shadow-emerald-950'>
+        <section id='services' className=' shadow-lg pb-20 shadow-emerald-950'>
             <div className='w-full h-[100px]'></div>
             <div><h1 className='text-amber-50 text-center text-4xl mb-20 font-bold uppercase'>My Quality Services</h1></div>
             <div className='container flex flex-col gap-5'>

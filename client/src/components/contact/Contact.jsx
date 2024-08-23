@@ -7,7 +7,7 @@ import {IoIosSend} from "react-icons/io";
 
 const Contact = () => {
     return (
-        <section id='contact' className='pt-24 mt-20 pb-28'>
+        <section id='contact' className='pt-24  pb-16'>
             <h2 className='text-center text-4xl uppercase text-amber-50 font-bold mb-5'>Get in
                 <span className='text-amber-400'>touch</span></h2>
             <div className='md:px-[5rem] px-[2rem] grid md:grid-cols-5 grid-cols-1 mx-auto'>

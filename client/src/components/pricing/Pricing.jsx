@@ -14,7 +14,7 @@ const Pricing = () => {
         'Monthly Conferences','Personal Advice']
 
     return (
-        <div id='pricing' className='mt-28 pt-24'>
+        <div id='pricing' className=' pt-24'>
             <div>
                 <div className='text-center flex flex-col justify-center'>
                     <h2 className='text-4xl text-amber-50 font-semibold'>Here Are All our Pricing</h2>

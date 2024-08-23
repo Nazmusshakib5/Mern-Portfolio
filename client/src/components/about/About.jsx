@@ -4,7 +4,7 @@ const About = () => {
     const projectData=[{img:'img-1',title:'title-1'},{img:'img-2',title:'title-2'}
     ,{img:'img-3',title:'title-3'},{img:'img-4',title:'title-4'},{img:'img-5',title:'title-5'}]
     return (
-        <div id='projects' className='aboutSection w-full mt-14 shadow-lg pb-20 shadow-emerald-950'>
+        <div id='projects' className='aboutSection w-full  shadow-lg pb-20 shadow-emerald-950'>
             <div className='w-full h-[100px]'></div>
             <div><h1 className='text-amber-50 text-center text-4xl mb-14 font-bold uppercase'>New Projects</h1></div>
             <div className='container md:grid grid-cols-3 gap-10 flex flex-col'>
