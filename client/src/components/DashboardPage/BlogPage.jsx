@@ -1,10 +1,11 @@
 import DashboardPage from "./DashboardPage.jsx";
+import CreateBlogPage from "./CreateBlogPage.jsx";
 
 
 const BlogPage = () => {
     return (
         <DashboardPage>
-            <h2>Blog</h2>
+           <CreateBlogPage/>
         </DashboardPage>
     );
 };

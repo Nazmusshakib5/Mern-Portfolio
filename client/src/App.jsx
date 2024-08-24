@@ -1,9 +1,9 @@
 import './App.css'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import MasterLayout from "./components/MasterLayout/MasterLayout.jsx";
-import LoginPage from "./components/Login Page/LoginPage.jsx";
 import BlogPage from "./components/DashboardPage/BlogPage.jsx";
 import DashBoardHomePage from "./components/DashboardPage/DashBoardHomePage.jsx";
+import LoginPage from "./components/DashboardPage/LoginPage.jsx";
 
 // import About from './components/about/About.jsx'
 // import Blog from "./components/blog/Blog.jsx";
@@ -24,7 +24,7 @@ function App() {
                 <Route path='/' element={<MasterLayout/>}/>
                 <Route path='/dashboard' element={<DashBoardHomePage/>}/>
                 <Route path='/login' element={<LoginPage/>}/>
-                <Route path='/blogs' element={<BlogPage/>}/>
+                <Route path='/dashboard/blog' element={<BlogPage/>}/>
             </Routes>
        </BrowserRouter>
     </>

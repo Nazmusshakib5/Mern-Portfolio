@@ -13,6 +13,6 @@ router.post('/createBlog',authMiddleWare,BlogController.CreateBlogList)
 router.get('/deleteBlog/:blogID',authMiddleWare,BlogController.DeleteBlogList)
 
 //User API
-router.get('/login',UserController.VerifyUserLogin)
+router.post('/login',UserController.VerifyUserLogin)
 router.get('/logout',UserController.UserLogout)
 module.exports=router;

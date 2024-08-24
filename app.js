@@ -39,7 +39,7 @@ let URL='mongodb+srv://mongoShakib:<password>@cluster0.gtiw82u.mongodb.net/Portf
 let OPTION={user:'mongoShakib',pass:'mongoShakib69',autoIndex:true};
 
 mongoose.connect(URL,OPTION).then((res)=>{
-    console.log('MyWork Database conneted successfully')
+    console.log('Portfolio Database connected successfully')
 }).catch((err)=>{
     console.log(err)
 })
