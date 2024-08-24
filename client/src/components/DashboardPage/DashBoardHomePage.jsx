@@ -7,7 +7,7 @@ const DashBoardHomePage = () => {
 
     const [blogs,setBlogs]=useState(null)
     const [refresh,setRefresh]=useState(false)
-    const bodyData={blogTitle:'Updated Data'}
+    const bodyData={blogTitle:'Updated again and again'}
     const UpdateBlog=async (id,bodyData)=>{
         await axios.post(`/api/v1/saveBlog/${id}`,bodyData)
         setRefresh(!refresh)
@@ -25,12 +25,12 @@ const DashBoardHomePage = () => {
     console.log(blogs)
     return (blogs!==null? <DashboardPage>
         <div>
-            <div className="p-12 bg-white m-5">
-                <table className="table w-full">
+            <div className="p-12 bg-white m-5 rounded-md">
+                <table className=" w-full">
                     {/* head */}
                     <thead>
-                    <tr className='grid grid-cols-12 text-2xl text-gray-600'>
-                        <th className='col-span-1'>Sl</th>
+                    <tr className='grid grid-cols-12 text-2xl text-gray-600 text-left'>
+                        <th className='col-span-1 text-center'>Sl</th>
                         <th className=' col-span-7'>BlogTitle</th>
                         <th className=' col-span-2'>Edit</th>
                         <th className=' col-span-2'>Delete</th>
@@ -39,7 +39,7 @@ const DashBoardHomePage = () => {
                     <tbody>
 
                     {blogs.map((item, i) => {
-                        return (<tr key={i} className='grid grid-cols-12'>
+                        return (<tr key={i} className='grid grid-cols-12 shadow-lg mt-2 p-2'>
                             <th className='col-span-1 my-auto'>{i + 1}</th>
                             <td className='col-span-7 my-auto'>{item['blogTitle']}</td>
                             <td className='col-span-2'>

@@ -1,11 +1,15 @@
 import './DashboardPage.css'
 import {VscThreeBars} from "react-icons/vsc";
 import {RxAvatar} from "react-icons/rx";
-import {useState} from "react";
+import { RiLogoutCircleRLine } from "react-icons/ri";
+import {useEffect, useState} from "react";
 import DashSideBar from "./DashSideBar.jsx";
+import ValidationHelper from '../../Utility/IsLoggedIn.js'
+import {useNavigate} from "react-router-dom";
 
 
 const DashboardPage = (props) => {
+    const navigate=useNavigate()
     const [isSideBar,setIsSideBar]=useState(true)
     const SideBarState=()=>{
             setIsSideBar(!isSideBar)
@@ -27,12 +31,19 @@ const DashboardPage = (props) => {
             }
     }
     console.log(isSideBar)
+    useEffect(() => {
+        if(!ValidationHelper.IsLogin()){
+            navigate('/login')
+        }
+    }, [navigate]);
 
     return (
         <div>
             <nav className='w-full h-[10vh] bg-black text-emerald-50 flex justify-between items-center px-2 text-3xl'>
                 <div><VscThreeBars onClick={()=>SideBarState()}/></div>
-                <div><RxAvatar/></div>
+                <div className='flex items-center gap-5'><RxAvatar/>
+                <div className='flex items-center gap-2 p-2 bg-emerald-900 rounded-lg text-xl md:mr-2'><RiLogoutCircleRLine/>Logout</div>
+                </div>
             </nav>
             <div className="flex bg-white">
                 <div className='min-h-[90vh] pt-20  sideBarGrow' id='sideBar'>
