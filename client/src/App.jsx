@@ -4,17 +4,8 @@ import MasterLayout from "./components/MasterLayout/MasterLayout.jsx";
 import BlogPage from "./components/DashboardPage/BlogPage.jsx";
 import DashBoardHomePage from "./components/DashboardPage/DashBoardHomePage.jsx";
 import LoginPage from "./components/DashboardPage/LoginPage.jsx";
+import UpdateBlog from "./components/DashboardPage/UpdateBlog.jsx";
 
-// import About from './components/about/About.jsx'
-// import Blog from "./components/blog/Blog.jsx";
-// import Contact from "./components/contact/Contact.jsx";
-// import Home from "./components/home/Home.jsx";
-// import MyWork from "./components/Myworks/MyWork.jsx";
-// import Pricing from "./components/pricing/Pricing.jsx";
-// import Resume from "./components/resume/Resume.jsx";
-// import Services from "./components/services/Services.jsx";
-// import Navbar from "./components/Navbar/Navbar.jsx";
-// import Testimonial from "./components/testimonial/Testimonial.jsx";
 
 function App() {
   return (
@@ -25,6 +16,7 @@ function App() {
                 <Route path='/dashboard' element={<DashBoardHomePage/>}/>
                 <Route path='/login' element={<LoginPage/>}/>
                 <Route path='/dashboard/blog' element={<BlogPage/>}/>
+                <Route path='/dashboard/update/:ID' element={<UpdateBlog/>}/>
             </Routes>
        </BrowserRouter>
     </>

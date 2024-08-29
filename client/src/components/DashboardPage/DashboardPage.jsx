@@ -6,6 +6,7 @@ import {useEffect, useState} from "react";
 import DashSideBar from "./DashSideBar.jsx";
 import ValidationHelper from '../../Utility/IsLoggedIn.js'
 import {useNavigate} from "react-router-dom";
+import axios from "axios";
 
 
 const DashboardPage = (props) => {
@@ -30,7 +31,12 @@ const DashboardPage = (props) => {
                 contentState.classList.remove('contentBarShrink')
             }
     }
-    console.log(isSideBar)
+    const HandleLogout=async ()=>{
+        await axios.get('/api/v1/logout')
+        navigate('/login')
+    }
+
+
     useEffect(() => {
         if(!ValidationHelper.IsLogin()){
             navigate('/login')
@@ -42,7 +48,9 @@ const DashboardPage = (props) => {
             <nav className='w-full h-[10vh] bg-black text-emerald-50 flex justify-between items-center px-2 text-3xl'>
                 <div><VscThreeBars onClick={()=>SideBarState()}/></div>
                 <div className='flex items-center gap-5'><RxAvatar/>
-                <div className='flex items-center gap-2 p-2 bg-emerald-900 rounded-lg text-xl md:mr-2'><RiLogoutCircleRLine/>Logout</div>
+                <div className='flex items-center gap-2 p-2 bg-emerald-900 rounded-lg text-xl md:mr-2'
+                    onClick={()=>HandleLogout()}>
+                    <RiLogoutCircleRLine/>Logout</div>
                 </div>
             </nav>
             <div className="flex bg-white">

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ita,wght@0,300..900;1,300..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +8,7 @@
 :root{
 
           /*Global Css Variable*/
-    /*Colors-----------------------------------------------------------------------*/
+    /*Colors----------------------------------------------------------------------*/
   --first-color: hsl(353,100%,65%);
   --title-color: hsl(244,24%,26%);
   --text-color: hsl(244,16%,43%);
@@ -16,7 +16,7 @@
   --body-color: hsla(188, 65%, 5%, 0.92);
   --container-color: #fff;
 
-  /*Font and Typography-------------------------------------------------------------*/
+  /*Font and Typography------------------------------------------------------------*/
   --body-font:'Rubik', sans-serif;
   --h1-font-size:2.25rem;
   --h2-font-size:1.5rem;
@@ -25,17 +25,47 @@
   --small-font-size:0.875rem;
   --smaller-font-size:0.813rem;
 
-  /*Font weight-------------------------------------------------------------*/
+  /*Font weight------------------------------------------------------------*/
   --font-medium:500;
   --font-semibold:600;
   --font-bold:700;
 
-  /*Box Shadow-------------------------------------------------------------*/
+  /*Box Shadow------------------------------------------------------------*/
   --shadow:0px 5px 20px 0px rgba(69 67 96 / 10%);
   --border-radius:20px;
+
+
+  /*---------------------------------------------------------------------------*/
+  /*---------------------------------------------------------------------------*/
+  /*---------------------------------------------------------------------------*/
+  /*---------------------------------------------------------------------------*/
+  /*---------------------------------------------------------------------------*/
+
+
+
+  /*Global Custom Css Variable*/
+
+  /*--Custom-bg-one: #111f2f;*/
+  --Custom-bg-one: #000000;
+  --Custom-bg-two: #04293A;
+  --Custom-bg-three: #809A6F;
+  /*--Custom-bg-Four: #1a222f;*/
+  /*--Custom-bg-Four: #111a2f;*/
+  --Custom-bg-Four: #111115;
+
+
+
+  --Custom-text-one: #afafaf;
+  --Custom-text-four: #809A6F;
+  --Custom-text-Two: #9daaf2;
+  --Custom-text-Three: #fff;
+
+  /*--Custom-button-one: #9daaf2;*/
+  --Custom-button-one: #809A6F;
+  --Custom-button-oneHover: #afa0ff;
 }
 
-    /*Responsive Typography---------------------------------------*/
+    /*Responsive Typography--------------------------------------*/
 @media screen and (max-width:1024px) {
   :root{
     --h1-font-size:1.75rem;
@@ -171,10 +201,60 @@ img{
   margin-top: 50px;
 }
 .active{
-  color: #fbbf24;
+  color: var(--Custom-button-one);
 }
 
 .activePagePagination{
   background-color: #022a02;
   border: 1px solid white;
 }
+
+
+
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+
+
+.CustomBgOne{
+  background-color: var(--Custom-bg-one);
+}
+.CustomBgTwo{
+  background-color: var(--Custom-bg-two);
+}
+.CustomBgThree{
+  background-color: var(--Custom-bg-three);
+}
+.CustomBgFour{
+  background-color: var(--Custom-bg-Four);
+}
+
+
+.CustomTextOne{
+  color: var(--Custom-text-one);
+}
+.CustomTextTwo{
+  color: var(--Custom-text-Two);
+}
+.CustomTextThree{
+  color: var(--Custom-text-Three);
+}
+.CustomTextFour{
+  color: var(--Custom-text-four);
+}
+
+
+
+.CustomButtonOne{
+  background-color: var(--Custom-button-one);
+  color: var(--Custom-text-Three);
+}
+.CustomButtonOne:hover{
+  background-color: var(--Custom-button-oneHover);
+  color: var(--Custom-text-Three);
+}
+
+

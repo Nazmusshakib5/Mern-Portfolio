@@ -46,9 +46,21 @@ const DeleteBlogService=async (req)=>{
     }
 }
 
+const ReadSingleBlogService=async (req)=>{
+    try{
+        const blogID=new ObjectId(req.params.blogID)
+        let data= await BlogModel.findOne({_id:blogID})
+        return {status:'success',msg:'Single Blog Data found Successfully',data:data}
+
+    }catch (e) {
+        return {status:'failed',msg:'Single Blog is not Found',err:e.toString()}
+    }
+}
+
 module.exports= {
     ShowBlogService,
     UpdateBlogService,
     CreateBlogService,
-    DeleteBlogService
+    DeleteBlogService,
+    ReadSingleBlogService
 }

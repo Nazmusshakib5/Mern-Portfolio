@@ -1,0 +1,4 @@
+.custom-modal-width {
+    width:800px !important; /* Force the width to 1000px */
+    max-width: 1000px !important; /* Ensure it doesn't shrink below 1000px */
+}

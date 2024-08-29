@@ -11,6 +11,7 @@ router.get('/blog',BlogController.ShowBlogList)
 router.post('/saveBlog/:blogID',authMiddleWare,BlogController.UpdateBlogList)
 router.post('/createBlog',authMiddleWare,BlogController.CreateBlogList)
 router.get('/deleteBlog/:blogID',authMiddleWare,BlogController.DeleteBlogList)
+router.get('/readBlog/:blogID',authMiddleWare,BlogController.ReadSingleBlog)
 
 //User API
 router.post('/login',UserController.VerifyUserLogin)

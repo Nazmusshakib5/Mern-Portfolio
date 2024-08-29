@@ -1,5 +1,5 @@
 import './Navbar.css'
-import avatar1 from '../../assets/avatar-1.svg'
+import avatar1 from '../../assets/avatar-2.svg'
 import {navItemID} from "./NavItemID.jsx";
 import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";

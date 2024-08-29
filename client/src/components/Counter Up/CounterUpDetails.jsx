@@ -7,13 +7,13 @@ const CounterUpDetails = () => {
     const [count,setCount]=useState(false)
 
     return (
-        <div className='mt-28  shadow-lg pb-28 shadow-emerald-950'>
+        <div className=' CustomBgFour py-28 '>
             <ScrollTrigger onEnter={()=>setCount(true)} onExit={()=>setCount(false)}>
                 <div
-                    className='bg-[#020202] container border-y-2 border-emerald-900 text-center px-20 py-8 md:px-36 md:py-10
+                    className=' container text-center px-20 py-8 md:px-36 md:py-10
                  md:grid grid-cols-4 flex flex-col md:gap-0 gap-5'>
                     <div>
-                        <h2 className='text-amber-300 text-5xl mb-2'>
+                        <h2 className='CustomTextFour text-5xl font-bold mb-2'>
                             {
                              count && <CountUp start={0} end={95} delay={0.25} duration={2.75}></CountUp>
                             }
@@ -22,7 +22,7 @@ const CounterUpDetails = () => {
 
                     </div>
                     <div>
-                        <h2 className='text-amber-300 text-5xl mb-2'>
+                        <h2 className='CustomTextFour text-5xl font-bold mb-2'>
                             {
                                 count && <CountUp start={0} end={75} delay={0.25} duration={2.75}></CountUp>
                             }
@@ -30,7 +30,7 @@ const CounterUpDetails = () => {
                         <p className='whiteFont'>Satisfied Client</p>
                     </div>
                     <div>
-                        <h2 className='text-amber-300 text-5xl mb-2'>
+                        <h2 className='CustomTextFour text-5xl font-bold mb-2'>
                             {
                                 count && <CountUp start={0} end={55} delay={0.25} duration={2.75}></CountUp>
                             }
@@ -38,7 +38,7 @@ const CounterUpDetails = () => {
                         <p className='whiteFont'>Live Projects</p>
                     </div>
                     <div>
-                        <h2 className='text-amber-300 text-5xl mb-2'>
+                        <h2 className='CustomTextFour text-5xl font-bold mb-2'>
                             {
                                 count && <CountUp start={0} end={125} delay={0.25} duration={2.75}></CountUp>
                             }

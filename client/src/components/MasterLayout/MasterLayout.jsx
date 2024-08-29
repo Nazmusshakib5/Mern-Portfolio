@@ -19,7 +19,7 @@ const MasterLayout = () => {
             <CounterUpDetails/>
             <Resume/>
             <Blog/>
-            <Pricing/>
+            {/*<Pricing/>*/}
             <Testimonial/>
             <Contact/>
         </div>

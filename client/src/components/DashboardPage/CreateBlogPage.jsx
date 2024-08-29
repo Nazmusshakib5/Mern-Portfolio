@@ -1,6 +1,9 @@
 import {useState} from "react";
-
+import axios from "axios";
+import {useNavigate} from "react-router-dom";
 const CreateBlogPage = () => {
+
+    const navigate=useNavigate()
     const [title, setTitle] = useState('');
     const [imageUrl, setImageUrl] = useState('');
     const [description, setDescription] = useState('');
@@ -10,6 +13,13 @@ const CreateBlogPage = () => {
         // Handle form submission logic here
         console.log({ title, imageUrl, description });
     };
+
+    const HandleBlogPost=async (title,imageUrl,description)=>{
+        let data=await axios.post('/api/v1/createBlog',{blogTitle:title,blogImage:imageUrl,blogDetails:description})
+        if(data['data']['status']==='success'){
+            navigate('/dashboard')
+        }
+    }
     return (
         <div className="min-h-[90vh] flex items-center justify-center bg-gray-100">
             <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
@@ -27,7 +37,7 @@ const CreateBlogPage = () => {
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
                             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none
-                            text-gray-100 bg-gray-100 focus:border-emerald-950"
+                            text-gray-700 bg-gray-100 focus:border-emerald-950"
                         />
                     </div>
                     {/* Image URL */}
@@ -42,7 +52,7 @@ const CreateBlogPage = () => {
                             value={imageUrl}
                             onChange={(e) => setImageUrl(e.target.value)}
                             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none
-                            text-gray-100 bg-gray-100 focus:border-emerald-950"
+                            text-gray-700 bg-gray-100 focus:border-emerald-950"
                         />
                     </div>
                     {/* Description */}
@@ -56,14 +66,16 @@ const CreateBlogPage = () => {
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none
-                             text-gray-100 bg-gray-100 focus:border-emerald-950 h-32"
+                             text-gray-700 bg-gray-100 focus:border-emerald-950 h-32"
                         ></textarea>
                     </div>
                     {/* Submit Button */}
                     <div className="flex items-center justify-center">
                         <button
+                            onClick={()=>HandleBlogPost(title,imageUrl,description)}
                             type="submit"
-                            className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline w-full"
+                            className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg
+                             focus:outline-none focus:shadow-outline w-full"
                         >
                             Post Blog
                         </button>
