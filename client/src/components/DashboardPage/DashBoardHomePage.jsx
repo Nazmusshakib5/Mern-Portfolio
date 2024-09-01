@@ -2,6 +2,7 @@ import DashboardPage from "./DashboardPage.jsx";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
+import LoaderBar from "../SkeletonLoader/LoaderBar.jsx";
 
 
 const DashBoardHomePage = () => {
@@ -95,7 +96,7 @@ const DashBoardHomePage = () => {
                 </table>
             </div>
         </div>
-    </DashboardPage> : 'not found');
+    </DashboardPage> : <LoaderBar/>);
 };
 
 export default DashBoardHomePage;

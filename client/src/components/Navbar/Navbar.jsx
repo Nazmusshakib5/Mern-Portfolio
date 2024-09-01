@@ -73,8 +73,8 @@ const Navbar = () => {
                  className="NavBody px-4 py-7 w-full top-0 z-10 fixed bg-transparent">
                 <div className=" mx-auto flex justify-between items-center">
                     {/* Left Icon */}
-                    <div className="text-white flex me-10">
-                        <a href="#" className="flex items-center">
+                    <div className="text-white flex me-10 items-center" onClick={()=>scrollToSection('home')}>
+                        <a  className="flex items-center">
                             <img
                                 src={avatar1}
                                 alt="Logo"
@@ -84,7 +84,7 @@ const Navbar = () => {
                         <p className='uppercase'>Hulo</p>
                     </div>
 
-                    <div className="hidden md:flex space-x-4 text-white md:mr-20 md:gap-8 gap-3">
+                    <div className="hidden md:flex lg:space-x-4 md:space-x-2 text-white md:mr-5 lg:mr-20 lg:gap-8 md:gap-5 gap-3">
                         {navItemID.map((item, i) => (
                             <Link key={i} to='/' onClick={() => scrollToSection(item)}
                                   className={activeLink === item ? 'uppercase hover:text-gray-400 active' : 'uppercase hover:text-gray-400'}>

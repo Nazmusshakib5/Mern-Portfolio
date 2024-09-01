@@ -42,7 +42,7 @@ const DeleteBlogService=async (req)=>{
         return {status:'success',msg:'Data Deleted Successfully',data:data}
 
     }catch (e) {
-        return {status:'failed',msg:'Blog is not Updated',err:e.toString()}
+        return {status:'failed',msg:'Blog is not Deleted',err:e.toString()}
     }
 }
 

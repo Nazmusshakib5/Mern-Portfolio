@@ -1,7 +1,7 @@
 import './Services.css'
 const Services = () => {
     return (
-        <section id='services' className=' CustomBgOne pb-20 '>
+        <section id='services' className=' CustomBgOne pb-20 md:px-0 px-3'>
             <div className='w-full h-[100px]'></div>
             <div><h1 className='text-amber-50 text-center text-4xl mb-20 font-bold uppercase'>My Quality Services</h1></div>
             <div className='container flex flex-col gap-5'>

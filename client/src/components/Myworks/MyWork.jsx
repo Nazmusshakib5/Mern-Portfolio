@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import Pagination from "../SmallComponents/Pagination.jsx";
 import axios from "axios";
 const MyWork = () => {
-    const arr=['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th']
     //fetch data ,create a useState for data,use it in useEffect in IIF
 
     const [blogs,setBlogs]=useState(null)

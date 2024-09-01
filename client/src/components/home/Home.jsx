@@ -6,10 +6,10 @@ const Home = () => {
         <div>
             <section className='hero-section shadow-lg shadow-emerald-950  CustomBgOne' id='home'>
                 <div className='grid grid-cols-12 items-center justify-center min-h-screen'>
-                    <div className='col-span-4 p-12'>
-                        <img className='w-full ms-10' src={workingLate} alt='image'/>
+                    <div className='col-span-12 md:col-span-4  px-12 md:px-0 md:p-12'>
+                        <img className='w-full lg:ms-10 md:ms-5' src={workingLate} alt='image'/>
                     </div>
-                    <div className=' md:ml-24 col-span-8'>
+                    <div className=' lg:ml-24 md:ml-16 md:col-span-8 col-span-12 px-10 md:px-0'>
                     <h4 className='CustomTextOne md:text-7xl text-3xl uppercase'>I'M Nazmus Shakib</h4>
                         {/*<p className='text-amber-50 md:text-7xl mt-3 text-5xl'>Personal Portfolio for</p>*/}
                         <p className='CustomTextOne md:text-6xl mt-3 text-2xl py-1'>Web Developer</p>

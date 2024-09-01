@@ -55,7 +55,7 @@
 
 
 
-  --Custom-text-one: #afafaf;
+  --Custom-text-one: #efeded;
   --Custom-text-four: #809A6F;
   --Custom-text-Two: #9daaf2;
   --Custom-text-Three: #fff;
@@ -205,7 +205,6 @@ img{
 }
 
 .activePagePagination{
-  background-color: #022a02;
   border: 1px solid white;
 }
 
@@ -230,6 +229,9 @@ img{
 }
 .CustomBgFour{
   background-color: var(--Custom-bg-Four);
+}
+.CustomBgFive{
+  background-color: var(--Custom-text-one);
 }
 
 

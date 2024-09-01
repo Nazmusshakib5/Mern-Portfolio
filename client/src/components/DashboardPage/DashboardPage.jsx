@@ -57,7 +57,7 @@ const DashboardPage = (props) => {
                 <div className='min-h-[90vh] pt-20  sideBarGrow' id='sideBar'>
                     <DashSideBar/>
                 </div>
-                <div className='min-h-[90vh] w-full contentBar bg-[#999999]' id='contentBar'>
+                <div className='min-h-[90vh] w-full contentBar CustomBgFive' id='contentBar'>
                     {props.children}
                 </div>
             </div>

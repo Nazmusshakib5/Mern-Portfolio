@@ -17,8 +17,7 @@ const About = () => {
 
 
     return (
-        blogs!==null?<div id='projects' className='aboutSection w-full pb-28 CustomBgFour '>
-            <div className='w-full h-[100px]'></div>
+        blogs!==null?<div id='projects' className='aboutSection w-full pb-28 pt-28 CustomBgFour md:px-0 px-3'>
             <div><h1 className='text-amber-50 text-center text-4xl mb-14 font-bold uppercase'>New Projects</h1></div>
             <div className='container md:grid grid-cols-3 gap-10 flex flex-col'>
                 {

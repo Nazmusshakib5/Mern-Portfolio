@@ -7,7 +7,7 @@ import {IoIosSend} from "react-icons/io";
 
 const Contact = () => {
     return (
-        <section id='contact' className='pt-24 CustomBgFour pb-16'>
+        <section id='contact' className='pt-24 CustomBgFour pb-16 md:w-3/4 md:mx-auto'>
             <h2 className='text-center text-4xl uppercase text-amber-50 font-bold mb-5'>Get in
                 <span className='text-amber-400'>touch</span></h2>
             <div className='md:px-[5rem] px-[2rem] grid md:grid-cols-5 grid-cols-1 mx-auto'>
@@ -49,24 +49,24 @@ const Contact = () => {
                 <div
                     className='w-full col-span-3 md:grid grid-cols-3 md:gap-5 flex flex-col gap-3 text-amber-50 mt-6 md:mt-0'>
                     <div>
-                        <label className="input  input-bordered flex items-center gap-2 rounded-3xl ">
-                            <input type="text" className="grow" placeholder="YOUR NAME"/>
+                        <label className="input  input-bordered flex items-center gap-2 rounded-3xl">
+                            <input type="text" className="grow" placeholder="NAME"/>
                         </label>
                     </div>
                     <div>
                         <label className="input input-bordered flex items-center gap-2 rounded-3xl">
-                            <input type="text" className="grow" placeholder="YOUR EMAIL"/>
+                            <input type="text" className="grow" placeholder="EMAIL"/>
                         </label>
                     </div>
                     <div>
                         <label className="input input-bordered flex items-center gap-2 rounded-3xl">
-                            <input type="text" className="grow" placeholder="YOUR SUBJECT"/>
+                            <input type="text" className="grow" placeholder="SUBJECT"/>
                         </label>
                     </div>
                     <textarea className="textarea textarea-bordered  col-span-3 md:h-40
                     h-24
                     rounded-3xl" placeholder="YOUR MESSAGE"></textarea>
-                    <div>
+                    <div className='col-span-2 lg:col-span-1'>
                         <div className='border rounded-3xl  border-green-700 hover-animate hoverBtn'>
                             <p className=' ms-8 py-2 uppercase md:text-md text-amber-50'>Send message</p>
                             <div className='w-12 rounded-3xl h-full bg-emerald-700 absolute top-0 right-0
