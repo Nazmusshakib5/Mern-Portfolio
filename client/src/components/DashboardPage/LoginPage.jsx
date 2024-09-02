@@ -13,7 +13,7 @@ const LoginPage = () => {
         if(data['data']['status']==='success'){
             console.log('successfully logged in')
             console.log('reqBody is',reqBody)
-            navigate('/dashboard/blog')
+            navigate('/dashboard')
         }
         else {
             console.log('failed login')
