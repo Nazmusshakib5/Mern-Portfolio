@@ -12,7 +12,8 @@ router.get('/blog',BlogController.ShowBlogList)
 router.post('/saveBlog/:blogID',authMiddleWare,BlogController.UpdateBlogList)
 router.post('/createBlog',authMiddleWare,BlogController.CreateBlogList)
 router.get('/deleteBlog/:blogID',authMiddleWare,BlogController.DeleteBlogList)
-router.get('/readBlog/:blogID',authMiddleWare,BlogController.ReadSingleBlog)
+router.get('/readBlog/:blogID',BlogController.ReadSingleBlog)
+router.get('/readBlogBySimilarities/:ID',BlogController.ReadBlogBySimilarities)
 
 
 //Project Api

@@ -2,6 +2,8 @@ import './MyWork.css'
 import {useEffect, useState} from "react";
 import Pagination from "../SmallComponents/Pagination.jsx";
 import axios from "axios";
+import {Link} from "react-router-dom";
+import LoaderBar from "../SkeletonLoader/LoaderBar.jsx";
 const MyWork = () => {
     //fetch data ,create a useState for data,use it in useEffect in IIF
 
@@ -30,13 +32,12 @@ const MyWork = () => {
                 {
                     CurrentPageData.map((item,i)=>{
                         return (
-                            <div key={i} className="card CustomBgOne shadow-xl">
-                                <div className="card-body text-amber-50">
-                                    <h2 className="card-title">{item['blogTitle']}</h2>
-                                    <img src={item['blogImage']} alt='image' className='h-[150px]'/>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <Link to={`/blogDetails/${item['_id']}`} key={i} className="card CustomBgOne shadow-xl">
+                                <div className="card-body CustomTextOne">
+                                    <img src={item['blogImage']} alt='image' className='h-[150px] rounded-md'/>
+                                    <h2 className="text-xl font-bold text-center">{item['blogTitle']}</h2>
                                 </div>
-                            </div>
+                            </Link>
                         )
                     })
                 }
@@ -49,7 +50,7 @@ const MyWork = () => {
             />
         </section>
 
-    :'no data');
+    :<LoaderBar/>);
 };
 
 export default MyWork;

@@ -6,6 +6,7 @@ import LoginPage from "./components/DashboardPage/LoginPage.jsx";
 import UpdateBlog from "./components/DashboardPage/UpdateBlog.jsx";
 import DashboardLandingPage from "./components/DashboardPage/DashboardLandingPage.jsx";
 import DashBoardHomePage from "./components/DashboardPage/DashBoardHomePage.jsx";
+import BlogDetailsPage from "./components/blog/BlogDetailsPage.jsx";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
        <BrowserRouter>
             <Routes>
                 <Route path='/' element={<MasterLayout/>}/>
+                <Route path='/blogDetails/:ID' element={<BlogDetailsPage/>}/>
                 <Route path='/dashboard' element={<DashboardLandingPage/>}/>
                 <Route path='/login' element={<LoginPage/>}/>
                 <Route path='/dashboard/createblog' element={<BlogPage/>}/>

@@ -3,7 +3,8 @@ const {
     UpdateBlogService,
     CreateBlogService,
     DeleteBlogService,
-    ReadSingleBlogService
+    ReadSingleBlogService,
+    ReadBlogBySimilaritiesService
 } = require("../services/BlogService");
 
 
@@ -30,5 +31,9 @@ exports.DeleteBlogList = async (req, res) => {
 
 exports.ReadSingleBlog = async (req, res) => {
     const data = await ReadSingleBlogService(req);
+    return res.status(200).json(data)
+}
+exports.ReadBlogBySimilarities = async (req, res) => {
+    const data = await ReadBlogBySimilaritiesService(req);
     return res.status(200).json(data)
 }

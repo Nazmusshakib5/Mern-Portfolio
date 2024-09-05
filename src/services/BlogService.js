@@ -57,10 +57,23 @@ const ReadSingleBlogService=async (req)=>{
     }
 }
 
+const ReadBlogBySimilaritiesService=async (req)=>{
+    try{
+        const BlogID=new ObjectId(req.params.ID)
+        let blogType= await BlogModel.findOne({_id:BlogID}).select('blogType')
+        let data= await BlogModel.find({blogType:blogType['blogType']})
+        return {status:'success',msg:'Similar Project Data found Successfully',data:data}
+
+    }catch (e) {
+        return {status:'failed',msg:'Similar Project is not Found',err:e.toString()}
+    }
+}
+
 module.exports= {
     ShowBlogService,
     UpdateBlogService,
     CreateBlogService,
     DeleteBlogService,
-    ReadSingleBlogService
+    ReadSingleBlogService,
+    ReadBlogBySimilaritiesService
 }
