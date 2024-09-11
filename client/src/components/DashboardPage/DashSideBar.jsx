@@ -14,12 +14,12 @@ const DashSideBar = () => {
             <Link to='/dashboard/createblog' className=' py-2 px-3 text-[#262626] uppercase
            rounded-xl font-semibold text-xl text-center'>Post Blog
             </Link>
-            <div className=' py-2 px-3 text-[#262626] uppercase
+            <Link to='/dashboard/createProject' className=' py-2 px-3 text-[#262626] uppercase
            rounded-xl font-semibold text-xl text-center'>Projects
-            </div>
-            <div className=' py-2 px-3 text-[#262626] uppercase
-           rounded-xl font-semibold text-xl text-center'>Settings
-            </div>
+            </Link>
+           {/* <div className=' py-2 px-3 text-[#262626] uppercase*/}
+           {/*rounded-xl font-semibold text-xl text-center'>Settings*/}
+           {/* </div>*/}
 
         </div>
     );
