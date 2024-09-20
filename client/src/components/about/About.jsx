@@ -2,6 +2,8 @@ import './About.css'
 import {useEffect, useState} from "react";
 import axios from "axios";
 import LoaderBar from "../SkeletonLoader/LoaderBar.jsx";
+import {motion} from "framer-motion";
+import {FadeIn} from "../../variant.js";
 
 const About = () => {
     const [projects,setProjects]=useState(null)
@@ -19,16 +21,21 @@ const About = () => {
 
     return (
         projects!==null?<div id='projects' className='aboutSection w-full pb-28 pt-28 CustomBgFour md:px-0 px-3'>
-            <div><h1 className='text-amber-50 text-center text-4xl mb-14 font-bold uppercase'>New Projects</h1></div>
+            <div><h1 className='CustomTextOne text-center text-4xl mb-14 font-bold uppercase'>New Projects</h1></div>
             <div className='container md:grid grid-cols-3 gap-10 flex flex-col'>
                 {
                     projects.map((item,i)=>{
-                        return (<div key={i}
+                        return (<motion.div
+                                variants={i%2===1?FadeIn('down',0.2):FadeIn('up',0.2)}
+                                initial={'hidden'}
+                                whileInView={'show'}
+                                viewport={{once:false,amount:0.7}}
+                                key={i}
                                  onClick={() => document.getElementById(`myModal${i}`).showModal()}
                                 className="card cardBg text-white shadow-sm shadow-cyan-600 hover:bg-base-100
                                  hover:opacity-80 rounded-none">
                             <div className="card-body pb-2 pt-0 px-0">
-                                <img src={item['projectImage']} alt='image' className='h-[190px]'/>
+                                <img src={item['projectImage']} alt='image' className='h-[190px] '/>
                                 <div className="card-actions justify-center">
                                     {/*<button onClick={() => document.getElementById(`myModal${i}`).showModal()}*/}
                                     {/*        className="bg-emerald-700 px-8 py-2 rounded-xl">Open*/}
@@ -36,7 +43,7 @@ const About = () => {
                                     <h2 className="card-title my-2">{item['projectTitle']}</h2>
                                 </div>
                             </div>
-                        </div>)
+                        </motion.div>)
                     })
                 }
                 {

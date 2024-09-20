@@ -7,6 +7,7 @@ const CreateBlogPage = () => {
     const [title, setTitle] = useState('');
     const [imageUrl, setImageUrl] = useState('');
     const [description, setDescription] = useState('');
+    const [blogType, setBlogType] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,8 +15,8 @@ const CreateBlogPage = () => {
         console.log({ title, imageUrl, description });
     };
 
-    const HandleBlogPost=async (title,imageUrl,description)=>{
-        let data=await axios.post('/api/v1/createBlog',{blogTitle:title,blogImage:imageUrl,blogDetails:description})
+    const HandleBlogPost=async (title,imageUrl,description,blogType)=>{
+        let data=await axios.post('/api/v1/createBlog',{blogTitle:title,blogImage:imageUrl,blogType:blogType,blogDetails:description})
         if(data['data']['status']==='success'){
             navigate('/dashboard')
         }
@@ -36,6 +37,20 @@ const CreateBlogPage = () => {
                             placeholder="Enter blog title"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
+                            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none
+                            text-gray-700 bg-gray-100 focus:border-emerald-950"
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="blogType">
+                            Blog Type
+                        </label>
+                        <input
+                            type="text"
+                            id="blogType"
+                            placeholder="new"
+                            value={blogType}
+                            onChange={(e) => setBlogType(e.target.value)}
                             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none
                             text-gray-700 bg-gray-100 focus:border-emerald-950"
                         />
@@ -72,7 +87,7 @@ const CreateBlogPage = () => {
                     {/* Submit Button */}
                     <div className="flex items-center justify-center">
                         <button
-                            onClick={()=>HandleBlogPost(title,imageUrl,description)}
+                            onClick={()=>HandleBlogPost(title,imageUrl,description,blogType)}
                             type="submit"
                             className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg
                              focus:outline-none focus:shadow-outline w-full"

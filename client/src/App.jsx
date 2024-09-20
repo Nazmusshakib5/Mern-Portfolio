@@ -8,6 +8,7 @@ import DashboardLandingPage from "./components/DashboardPage/DashboardLandingPag
 import DashBoardHomePage from "./components/DashboardPage/DashBoardHomePage.jsx";
 import BlogDetailsPage from "./components/blog/BlogDetailsPage.jsx";
 import DashBoardProjectUpdatePage from "./components/DashboardPage/DashBoardProjectUpdatePage.jsx";
+import CreateProjectPage from "./components/DashboardPage/CreateProjectPage.jsx";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                 <Route path='/dashboard' element={<DashboardLandingPage/>}/>
                 <Route path='/login' element={<LoginPage/>}/>
                 <Route path='/dashboard/createblog' element={<BlogPage/>}/>
+                <Route path='/dashboard/createProject' element={<CreateProjectPage/>}/>
                 <Route path='/dashboard/updateProject/:ID' element={<DashBoardProjectUpdatePage/>}/>
                 <Route path='/dashboard/blogs' element={<DashBoardHomePage/>}/>
                 <Route path='/dashboard/update/:ID' element={<UpdateBlog/>}/>

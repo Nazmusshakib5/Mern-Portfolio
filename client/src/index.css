@@ -51,7 +51,10 @@
   --Custom-bg-three: #809A6F;
   /*--Custom-bg-Four: #1a222f;*/
   /*--Custom-bg-Four: #111a2f;*/
-  --Custom-bg-Four: #111115;
+  /*--Custom-bg-Four: #111115;*/
+  --Custom-bg-Four: #111116;
+  /*--Custom-bg-six: #fae906;*/
+  --Custom-bg-six: #2f5435;
 
 
 
@@ -233,6 +236,12 @@ img{
 .CustomBgFive{
   background-color: var(--Custom-text-one);
 }
+.CustomBgSix{
+  background-color: var(--Custom-bg-six);
+}
+.CustomBgSeven{
+  background: linear-gradient(to right, #2f5435, #809A6F);
+}
 
 
 .CustomTextOne{
@@ -247,6 +256,9 @@ img{
 .CustomTextFour{
   color: var(--Custom-text-four);
 }
+.CustomTextFive{
+  color: var(--Custom-bg-six);
+}
 
 
 
@@ -254,9 +266,30 @@ img{
   background-color: var(--Custom-button-one);
   color: var(--Custom-text-Three);
 }
+.CustomButtonTwo{
+  /*background-color: var(--Custom-bg-six);*/
+  background: linear-gradient(to right, #2f5435, #809A6F);
+  transition: all 0.3s ease-in-out;
+  color: var(--Custom-text-Three);
+  background-size: 200% 100%;
+  background-position: 0 0;
+}
 .CustomButtonOne:hover{
   background-color: var(--Custom-button-oneHover);
   color: var(--Custom-text-Three);
+}
+.CustomButtonTwo:hover{
+  background-color: var(--Custom-bg-six);
+  animation: bg-slide 0.7s ease-in-out forwards;
+  color: var(--Custom-text-Three);
+}
+@keyframes bg-slide {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 

@@ -41,7 +41,7 @@ const ProjectList = () => {
                 <tbody>
 
                 {blogs.map((item, i) => {
-                    return (<tr key={i} className='grid grid-cols-12 shadow-lg mt-2 p-2'>
+                    return (<tr key={i} className='grid grid-cols-12 shadow-lg mt-2 p-2 items-center'>
                         <th className='col-span-1 my-auto'>{i + 1}</th>
                         <td className='col-span-7 my-auto'>{item['projectTitle']}</td>
                         <td className='col-span-2'>

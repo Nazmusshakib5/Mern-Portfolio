@@ -35,7 +35,7 @@ const CarouselPost = () => {
 
     return (
         <div className='container pb-28'>
-            <h2 className='text-center text-4xl text-amber-50 py-28 font-semibold uppercase'>Customer Feedback</h2>
+            <h2 className='text-center text-4xl CustomTextOne py-28 font-semibold uppercase'>Customer Feedback</h2>
             <Carousel
                 responsive={responsive}
                 infinite={true}
@@ -45,7 +45,7 @@ const CarouselPost = () => {
                 {imageArr.map((item, i) => {
                     return (
                         <div key={i} className="card bg-base-100 shadow-xl md:me-8">
-                            <div className="avatar p-3 flex gap-8 items-center text-xl text-amber-50">
+                            <div className="avatar p-3 flex gap-8 items-center text-xl CustomTextOne">
                                 <div
                                     className="ring-primary ring-offset-base-100 w-12 rounded-full ring ring-offset-2">
                                     <img
@@ -55,7 +55,7 @@ const CarouselPost = () => {
                             </div>
                             <div className="card-body">
                                 <div className="card-actions ">
-                                    <p className='text-amber-50 px-16'>I had a fantastic experience with your service. The team was responsive, and the
+                                    <p className='CustomTextOne px-16'>I had a fantastic experience with your service. The team was responsive, and the
                                         product exceeded my expectations!</p>
                                     <div className='px-16'>
                                         <StarRatings rating={5} starRatedColor="#787878"

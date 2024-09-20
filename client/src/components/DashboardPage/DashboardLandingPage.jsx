@@ -18,7 +18,7 @@ const DashboardLandingPage = () => {
                     <div><p>23+ unread</p></div>
                 </div>
             </div>
-           <div className='bg-white border-2 m-5 p-5'>
+           <div className='bg-white border-2 m-5 p-5 rounded-lg'>
                <ProjectList/>
            </div>
         </DashboardPage>

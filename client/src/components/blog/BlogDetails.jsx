@@ -36,7 +36,8 @@ const BlogDetails = () => {
     console.log(singleBlogs)
     return (
         relatedBlogs !== null ? <div className='flex md:flex-row flex-col items-start CustomBgOne relative mx-auto'>
-                <div className=' w-full md:w-1/4 sticky top-[120px] flex flex-col gap-5 mt-10 px-6'>
+                <div className=' w-full md:w-1/4 sticky top-[120px] flex flex-col gap-5 mt-10 px-6 bg-black md:bg-transparent'>
+                    <h1 className='font-bold CustomTextOne text-center text-2xl'>Similar Blogs</h1>
                     {
                         relatedBlogs.map((item, i) => {
                             return (

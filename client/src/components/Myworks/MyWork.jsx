@@ -4,6 +4,9 @@ import Pagination from "../SmallComponents/Pagination.jsx";
 import axios from "axios";
 import {Link} from "react-router-dom";
 import LoaderBar from "../SkeletonLoader/LoaderBar.jsx";
+import {motion} from "framer-motion";
+import {FadeIn} from "../../variant.js";
+
 const MyWork = () => {
     //fetch data ,create a useState for data,use it in useEffect in IIF
 
@@ -27,8 +30,13 @@ const MyWork = () => {
 
     return (
         blogs!==null?<section className='container mx-auto'>
-            <div className='text-center mb-10'><h2 className='text-4xl font-semibold text-amber-50 uppercase'>Blogs</h2></div>
-            <div className='md:grid grid-cols-3 flex flex-col w-full gap-5'>
+            <div className='text-center mb-10'><h2 className='text-4xl font-semibold CustomTextOne uppercase'>Blogs</h2></div>
+            <motion.div
+                variants={FadeIn('up',0.2)}
+                initial={'hidden'}
+                whileInView={'show'}
+                viewport={{once:false,amount:0.7}}
+                className='md:grid grid-cols-3 flex flex-col w-full gap-5'>
                 {
                     CurrentPageData.map((item,i)=>{
                         return (
@@ -42,7 +50,7 @@ const MyWork = () => {
                     })
                 }
 
-            </div>
+            </motion.div>
             <Pagination postPerPage={postperPage}
                         totalPost={blogs.length}
                         setCurrentPage={setCurrentPage}

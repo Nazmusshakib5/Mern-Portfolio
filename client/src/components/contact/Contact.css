@@ -30,3 +30,7 @@
     right: 0;
     width: 100%;
 }
+
+.btnBorder{
+    border: 1px solid #36454F !important;
+}
