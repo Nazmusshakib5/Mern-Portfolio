@@ -4,7 +4,7 @@ import {IoCallSharp} from "react-icons/io5";
 import {TiSocialFacebook, TiSocialLinkedin} from "react-icons/ti";
 import {FaGithub} from "react-icons/fa";
 import {IoIosSend} from "react-icons/io";
-import { useRef } from 'react';
+import {useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 import {motion} from "framer-motion";
@@ -32,6 +32,7 @@ const Contact = () => {
             .then(
                 (data) => {
                     data['status']===200?toast.success('Email Sent Successfully'):toast.error('Email is not Sent')
+                    form.current.reset();
                 },
                 (error) => {
                     toast.error('Email is not Sent')
