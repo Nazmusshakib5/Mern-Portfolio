@@ -13,7 +13,7 @@ const cookieParser=require('cookie-parser')
 const mongoose=require('mongoose')
 const path=require('path')
 
-
+require('dotenv').config();
 
 app.use(
     helmet({
@@ -35,8 +35,10 @@ app.use(limiter);
 
 
 //database Connection Before Routing
-let URL='mongodb+srv://mongoShakib:<password>@cluster0.gtiw82u.mongodb.net/Portfolio';
-let OPTION={user:'mongoShakib',pass:'mongoShakib69',autoIndex:true};
+const DB_User_ID=process.env.DB_USER_ID
+const DB_User_Pass=process.env.DB_USER_PASS
+let URL=`mongodb+srv://${DB_User_ID}:<password>@cluster0.gtiw82u.mongodb.net/Portfolio`;
+let OPTION={user:DB_User_ID,pass:DB_User_Pass,autoIndex:true};
 
 mongoose.connect(URL,OPTION).then((res)=>{
     console.log('Portfolio Database connected successfully')
